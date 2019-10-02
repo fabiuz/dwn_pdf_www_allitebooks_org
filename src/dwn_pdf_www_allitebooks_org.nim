@@ -4,7 +4,8 @@
   Descrição: 
   Dia 27-set-2019, procurando por arquivos pdf, acabei encontrando o site:
     http://www.allitebooks.org, o site divide os livros por categoria,
-    há no dia que estou escrevendo este código, 835 livros, cheguei a baixar
+    há no dia que estou escrevendo este código, 835 páginas, com vários livros em pdf
+    e pub, cheguei a baixar
     alguns livros mais queria baixar todos e a única maneira de fazer isto,
     é criando um programa que acessa todos os links.
     Por este motivo, estou criando meu primeiro programa na linguagem 'nim'
@@ -26,13 +27,13 @@ echo "Baixador de pdf do site: " & SITE_URL
 echo "Autor: Fábio"
 
 var client_http = newHttpClient()
-var html_site:string = client_http.getContent(SITE_URL)
+#var html_site:string = client_http.getContent(SITE_URL)
 
 #[
   Na página principal do site: http://www.allitebooks.org é exibido
   vários livros, inclusive, você pode selecionar os livros por categoria.
 ]#
-let html_conteudo = parseHtml(html_site)
+#let html_conteudo = parseHtml(html_site)
 
 var url_pages:seq[string] = @[SITE_URL]
 
@@ -146,6 +147,8 @@ type
 var livros_download: seq[livro] = @[]
 
 for livro_url in livro_url_link:
+  echo "Analisando...", livro_url
+
   # Obtém o contéudo da página atual.
   var html_site_conteudo = client_http.getContent(livro_url)
 
