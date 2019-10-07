@@ -20,23 +20,28 @@ Com a experiência que tenho em outras linguagens, não foi difícil aprender Ni
 Então, resolvi escrever este programa em Nim, pra baixar todos os arquivos pdf do site: http://www.allitebooks.org.
 
 Obs.: Atualmente, o programa vai em cada página, localiza os livros, em seguida, de cada livro, baixa o arquivo pdf/pub e outros que tiver.
-Estive implementando uma técnica pra baixar somente livros que ainda não foram baixados, mas tive algum problema
-no banco de dados sqlite, estou verificando, então, por este motivo, o download pode durar horas, pois ele percorre todas as páginas e vai baixando automaticamente.
 
-Pra baixar, vc deve executar o comando desta forma:
+Procedimentos pra baixar os livros:
 
-`get_books_of_www_allitebooks_org -durl`
+**Obtenha a url do arquivo pdf/pub ou outro formato de todos os livros do site, usando o comando:**
 
-## O que o programa faz:
+    `get_books_of_www_allitebooks_org_2 -dfileurl`
 
-Baixa todos os pdfs de cada página visitada.
-Se o pdf não existir nada acontece, entretanto, é relatado em um arquivo qual link não funcionou.
-Os pdfs são baixados e são criados pastas categorizando qual conteúdo é, tais informações são obtidos do próprio site.
-Você pode interromper o download, entretanto, na próxima vez, vc deve começar tudo novamente.
+O comando acima deve ser executado somente uma vez.
 
+** Em seguida, baixe quantos livros desejar, usando o comando: **
 
-## Pra fazer:
-* Baixar somente pdfs que ainda não foram baixados.
-* Verificar se há novos pdfs em relação ao anteriores.
+`get_books_of_www_allitebooks_org_2 -qtbooks=<qt>`
+
+No comando acima substitua `<qt>`, pela quantidade desejada.
+
+Baixe nim e compile o arquivo:
+
+`nim c --d:release get_books_of_www_allitebooks_org_2`
+
+Futuramente, eu irei implementar uma opção pra baixar somente livros escolhidos pelo usuário. Por exemplo, pelo título do livro, pela categoria ou pelo nome do autor.
+
+**Obs.:** Alguns links podem dar erro 404/400, em novas versões, estarei corrigindo isto.
+Pois, identifiquei que alguns links são válidos.
 
 
