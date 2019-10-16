@@ -44,4 +44,6 @@ Futuramente, eu irei implementar uma opção pra baixar somente livros escolhido
 **Obs.:** Alguns links podem dar erro 404/400, em novas versões, estarei corrigindo isto.
 Pois, identifiquei que alguns links são válidos.
 
+O programa baixa os arquivos do livros e cria pasta por categorias. A informação da categoria dos livros é obtido diretamente do site.
+
 
