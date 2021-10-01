@@ -2,6 +2,8 @@
 ` Autor: Fábio Moura de Oliveira`       
 ` Data:  30-set-2019`
 
+## Observação: Em 1/10/2021, detectei que o site 'http://www.allitebooks.org' não está mais disponível, provavelmente, este repositório não será mais atualizado.
+
 Pesquisando por arquivos pdf na net, acabei achando o site: http://www.allitebooks.org, comecei baixar alguns arquivos.
 Mas resolvi baixar todos os arquivos, o problema é que há 835 páginas e cada página, há vários links de livros. Em cada link, acessado, há pelo menos 1 ou 2 links pra o endereço do arquivo pdf/pub a ser baixado.
 
